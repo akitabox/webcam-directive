@@ -113,6 +113,8 @@ angular.module('webcam', [])
           videoElem = document.createElement('video');
           videoElem.setAttribute('class', 'webcam-live');
           videoElem.setAttribute('autoplay', '');
+          // Disable iOS auto fullscreen, allow "play" inline
+          videoElem.setAttribute('playsinline', '');
           element.append(videoElem);
 
           if ($scope.placeholder) {
